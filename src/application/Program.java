@@ -41,6 +41,11 @@ public class Program {
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted! new id = " + newSeller.getId());
 		
+		System.out.println("\n=== TEST 5: seller udpate");
+		seller = sellerDao.findByid(1);
+		seller.setName("Martha Waine");
+		sellerDao.udpate(seller);
+		System.out.println("Udpate completed");
 	}
 
 }
