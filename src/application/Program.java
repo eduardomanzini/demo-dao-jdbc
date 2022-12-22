@@ -25,11 +25,15 @@ public class Program {
 		List<Seller> list = sellerDao.findByDepartment(department);
 		
 		
-		/*for (Seller obj : list) {
+		for (Seller obj : list) {
 			System.out.println(obj);
-		}*/
+		}
 		
-		list.forEach(System.out::println);
+		System.out.println("\n=== TEST 3: selller findAll ====");
+		list = sellerDao.findAll();
+		for (Seller obj : list) {
+			System.out.println(obj);
+		}
 		
 	}
 
